@@ -45,6 +45,10 @@ public class Greetings implements Runnable{
 //			new Thread(new Greetings(i+1)).start();
 		}
 		es.shutdown();
+		while(!es.isTerminated())
+		{
+			Logger.log("threadLog", "End.");
+		}
 	}
 
 }
